@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: transparent;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    color: initial;
+}
+.licorice-regular {
+    font-family: "Licorice", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, body {
+    @apply bg-primary;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    @apply flex justify-center text-secondary ;
+    &:visited {
+        @apply !text-secondary;
+    }
+    img {
+        width: 100px;
+        object-fit: contain;
+        margin: auto 0 auto 0;
+    }
+    p {
+        font-family: "Licorice", cursive;
+        font-size: 4rem;
+    }
+}
+
+p {
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-size: 1.2rem;
+    font-style: normal;
+}
+h1 {
+    width: max-content;
+    height: max-content;
+    font-optical-sizing: auto;
+    font-size: 4rem;
+    font-style: normal;
+    display: flex;
+    @apply font-black;
+    svg {
+        margin: auto;
+    }
+}
+h2 {
+    font-size: 1.5rem;
+}
+
+a{
+    @apply h-max flex gap-2;
+    svg {
+        @apply mb-auto mt-auto text-inherit;
+        color: red;
+    }
+}
+
+button {
+    @apply w-max h-[3em] leading-[3em] pl-5 pr-5 rounded-lg flex gap-2;
+    &.solid {
+        @apply bg-gradient-to-r from-primary-900 to-accent text-white hover:bg-accent-400 active:bg-secondary-700;
+    }
+    &.outline {
+        @apply bg-transparent outline-1 outline-accent text-accent ;
+    }
+    &.icon-btn {
+        @apply bg-primary-700 active:bg-primary-950 hover:shadow-2xl hover:bg-primary-900 text-white p-0 rounded-full;
+        width: 50px;
+        height: 50px;
+        svg, path {
+            color: white;
+            margin: auto;
+        }
+    }
+}
+
+input {
+    @apply min-w-[300px] w-full h-[50px] p-2 border-solid border-b-primary;
+    &:focus {
+        @apply outline-transparent border-solid border-b-primary-800;
+    }
+}
+
+.add-reduce-quant {
+    @apply grid grid-flow-col gap-2;
+    input {
+        @apply text-center;
+    }
+    button {
+        width: 100%;
+        min-width: 50px;
+        padding: 0;
+        @apply flex justify-center bg-primary-800 hover:bg-primary-700 active:bg-primary-900 ;
+        svg{
+            @apply m-auto;
+        }
+    }
+}
+svg {
+    path {
+        color: inherit;
+    }
+}
+
+.cart-table {
+    @apply grid w-full h-max pb-2 auto-rows-max min-w-[300px] text-center bg-primary-400 rounded-lg overflow-hidden;
+    thead {
+        @apply w-full h-[5vh] leading-[5vh] bg-primary-700;
+    }
+    tbody tr {
+        @apply min-h-[5vh] leading-[3em] border-solid border-b border-b-gray-300;
+    }
+    tr {
+        @apply grid grid-flow-col auto-cols-fr truncate ;
+    }
+}
+
+.page {
+    @apply w-full min-h-[calc(100vh-70px)]
+}
+
+.show-product {
+    @apply w-[300px] h-max grid bg-primary-400 cursor-pointer transition-all;
+    img {
+        @apply h-[40vh] object-cover hover:object-contain transition-all;
+    }
+    div {
+        @apply w-full p-2;
+    }
+}
+.hide-scrollbar::-webkit-scrollbar{
+    display: none;
+}
+.person { /** in profile page */
+    @apply h-max flex flex-wrap bg-gradient-to-tr from-primary-950 to-black-600 gap-2 rounded-lg p-2;
+    .person-icon {
+        @apply w-[200px] h-full text-white;
+    }
+    & .details {
+        @apply w-full flex-1 grid gap-2;
+    }
+    input {
+        @apply bg-transparent border-b text-white;
+    }
+}
+
