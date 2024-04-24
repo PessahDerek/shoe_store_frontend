@@ -2,7 +2,6 @@ import {createEffect, createMemo, Match, Switch, useContext} from "solid-js";
 import {AuthContext} from "../contexts/AuthContextProvider.tsx";
 import AuthPage from "./AuthPage.tsx";
 import {UserProfile} from "../vite-env";
-import {CgProfile} from "solid-icons/cg";
 import {RiUserFacesAccountCircleFill} from "solid-icons/ri";
 
 

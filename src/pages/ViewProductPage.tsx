@@ -44,7 +44,7 @@ export default function ViewProductPage() {
     }
 
     createEffect(()=>{
-        if(isAdded())setCart(prev => ({...prev, count: myCart().find(p => p.count).count}))
+        if(isAdded())setCart(prev => ({...prev, count: myCart().find((p:Cart) => p.count).count}))
     })
 
     return (
